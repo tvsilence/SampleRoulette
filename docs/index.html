@@ -49,6 +49,35 @@
 @media(max-width:1120px){.real-app.app-window{aspect-ratio:2316/1716}.stage-wrap{height:78vh}}
 @media(max-width:820px){.real-app.app-window{aspect-ratio:2316/1716}.screen-focus{border-width:2px}.screen-focus::after{inset:-5px}.screen-note{display:none}}
 @media(max-width:520px){.real-app.app-window{aspect-ratio:2316/1716;border-radius:9px}.demo-cursor{width:24px}}
+
+/* Mobile scrollytelling: keep the product preview visible without covering copy. */
+@media(max-width:820px){
+  .stage-wrap{
+    top:58px;
+    height:clamp(240px,38dvh,320px);
+    min-height:0;
+    padding:12px 10px 16px;
+    align-items:start;
+  }
+  .real-app.app-window{
+    width:min(100%,calc((clamp(240px,38dvh,320px) - 28px) * 1.3497));
+    max-height:calc(clamp(240px,38dvh,320px) - 28px);
+    margin-inline:auto;
+  }
+  .chapter{
+    min-height:100dvh;
+    align-items:flex-start;
+    padding:calc(clamp(240px,38dvh,320px) + 52px) 24px 72px;
+  }
+}
+
+@media(max-width:520px){
+  .hero{gap:24px;padding:86px 22px 38px}
+  .wordmark{width:min(68vw,250px);margin-bottom:20px}
+  .hero h1{font-size:clamp(44px,14vw,56px);line-height:.92}
+  .hero p{margin:20px 0;font-size:16px}
+  .hero-world{min-height:250px}
+}
 </style></head>
 <body>
 <svg class="icon-sprite" aria-hidden="true">
